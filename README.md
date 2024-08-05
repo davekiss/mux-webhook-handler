@@ -4,6 +4,8 @@
 npm install @mux/webhook-handler
 ```
 
+Then, make sure to set the `MUX_WEBHOOK_SECRET` environment variable to the value you found in the Mux dashboard.
+
 ## Using with Next.js
 
 Create a route handler file at your preferred location, eg. `/api/webhooks/mux/route.ts`.
