@@ -1,4 +1,15 @@
 {
+  "name": "@mux/webhook-handler",
+  "version": "1.0.0",
+  "description": "A webhook handler for Mux",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mux",
+  "license": "MIT",
   "dependencies": {
     "@mux/mux-node": "^8.8.0",
     "typescript": "^5.4.5"

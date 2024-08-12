@@ -8,7 +8,7 @@ Then, make sure to set the `MUX_WEBHOOK_SECRET` environment variable to the valu
 
 ## Using with Next.js
 
-Create a route handler file at your preferred location, eg. `/api/webhooks/mux/route.ts`.
+Create a route handler file at your preferred location, eg. `/app/api/webhooks/mux/route.ts`.
 
 Then, implement your logic inside the configuration passed into `createWebhooksHandler` to handle the various events sent from Mux.
 
