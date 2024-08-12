@@ -29,3 +29,5 @@ const handler = createWebhooksHandler({
 
 export const POST = handler.POST
 ```
+
+> Make sure your webhook matches the path you set in the Mux dashboard.
