@@ -91,14 +91,14 @@ function handleWebhooks(config, req) {
         if (handlerMap[event.type]) {
             return yield _handler(event, handlerMap[event.type]);
         }
-        // If we don't have a handler for the event, return a 404
-        return new Response('', { status: 404 });
+        // If we don't have a handler for the event, return a 204
+        return new Response(null, { status: 204 });
     });
 }
 exports.handleWebhooks = handleWebhooks;
 function _handler(event, callback) {
     return __awaiter(this, void 0, void 0, function* () {
-        let response = yield callback(event.data);
+        let response = yield callback(event);
         if (response != undefined) {
             return response;
         }
