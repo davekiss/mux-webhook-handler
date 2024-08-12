@@ -227,7 +227,7 @@ export async function handleWebhooks(config: WebhookRegistrationConfig, req: Req
 }
 
 async function _handler(event: Mux.Webhooks.UnwrapWebhookEvent, callback: Function): Promise<Response> {
-    let response = await callback(event.data)
+    let response = await callback(event)
     if (response != undefined) {
         return response
     } else {
