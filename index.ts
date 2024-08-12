@@ -222,8 +222,8 @@ export async function handleWebhooks(config: WebhookRegistrationConfig, req: Req
         return await _handler(event, handlerMap[event.type] as HandlerFn<HandlerType>)
     }
 
-    // If we don't have a handler for the event, return a 404
-    return new Response('', { status: 404 })
+    // If we don't have a handler for the event, return a 204
+    return new Response(null, { status: 204 })
 }
 
 async function _handler(event: Mux.Webhooks.UnwrapWebhookEvent, callback: Function): Promise<Response> {
